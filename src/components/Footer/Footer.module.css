@@ -1,0 +1,30 @@
+.footer {
+  background: #0f2338;
+  color: #ffffff;
+  padding: 24px 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.wrapper h3 {
+  margin: 0 0 6px;
+  font-family: "Playfair Display", serif;
+}
+
+.wrapper p {
+  margin: 0;
+  color: #dbe6ef;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}

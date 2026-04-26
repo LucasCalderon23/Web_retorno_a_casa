@@ -1,0 +1,87 @@
+.section {
+  padding: 88px 0;
+  background: #ffffff;
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.wrapper h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.intro {
+  font-size: clamp(1rem, 1.9vw, 1.18rem);
+  max-width: 680px;
+  line-height: 1.5;
+  color: #404040;
+  margin: 0 auto 34px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card {
+  background: #f5f9fa;
+  border: 1px solid rgba(30, 44, 56, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(14, 24, 34, 0.06);
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.body {
+  padding: 22px 22px 24px;
+}
+
+.card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.4rem, 2.6vw, 1.7rem);
+  margin: 0 0 12px;
+  color: #1b2730;
+}
+
+.card p {
+  line-height: 1.7;
+  margin: 0;
+  color: #31414f;
+}
+
+#entrenamiento {
+  scroll-margin-top: 94px;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .body {
+    text-align: center;
+  }
+}

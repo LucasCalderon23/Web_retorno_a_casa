@@ -1,0 +1,24 @@
+.section {
+  padding: 90px 24px;
+  background: #f3f8fb;
+  min-height: calc(100vh - 180px);
+}
+
+.wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper h1 {
+  margin: 0 0 16px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.wrapper p {
+  margin: 0;
+  color: #3b4d5b;
+  line-height: 1.7;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}

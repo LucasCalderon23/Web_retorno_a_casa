@@ -1,0 +1,74 @@
+.section {
+  min-height: calc(100vh - 160px);
+  padding: 84px 20px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #f7fbfd, #edf5f9);
+}
+
+.card {
+  width: min(100%, 460px);
+  background: #fff;
+  border: 1px solid rgba(16, 34, 48, 0.12);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 12px 28px rgba(14, 25, 36, 0.12);
+}
+
+.card h1 {
+  margin: 0 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  color: #3d4e5e;
+}
+
+.form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #213545;
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid #c6d4df;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.primaryButton {
+  margin-top: 18px;
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  background: #255c7f;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  padding: 11px 18px;
+  cursor: pointer;
+}
+
+.primaryButton:disabled {
+  opacity: 0.8;
+  cursor: progress;
+}
+
+.toggleButton {
+  margin-top: 12px;
+  border: 0;
+  background: transparent;
+  color: #255c7f;
+  font: inherit;
+  cursor: pointer;
+}
+
+.error {
+  margin: 10px 0 0;
+  color: #b93131;
+}

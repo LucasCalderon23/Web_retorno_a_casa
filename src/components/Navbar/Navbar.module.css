@@ -1,0 +1,150 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(44, 178, 25, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(7, 30, 5, 0.28);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.scrolled {
+  background: rgba(29, 132, 17, 0.96);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 68px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #081106;
+  transition: color 0.25s ease;
+}
+
+.brandIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  font-size: 0.96rem;
+  color: #071005;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #ecffe7;
+}
+
+.active {
+  color: #ecffe7;
+  font-weight: 700;
+}
+
+.logoutButton {
+  border: 1px solid rgba(7, 30, 5, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: #071005;
+  padding: 6px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 6px 2px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #081106;
+  margin: 5px 0;
+  transition: background-color 0.25s ease;
+}
+
+.scrolled .brand,
+.scrolled .menu a {
+  color: #f4fff1;
+}
+
+.scrolled .menu a:hover {
+  color: #d6ffcb;
+}
+
+.scrolled .hamburger span {
+  background: #f4fff1;
+}
+
+.scrolled .logoutButton {
+  color: #f4fff1;
+  border-color: rgba(244, 255, 241, 0.5);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    min-height: 64px;
+    padding: 0 16px;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0 14px;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(29, 29, 29, 0.1);
+  }
+
+  .logoutButton {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .scrolled .menu li a {
+    border-bottom-color: rgba(255, 255, 255, 0.18);
+  }
+}
