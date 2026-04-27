@@ -3,18 +3,17 @@ import useScrollReveal from "../../hooks/useScrollReveal";
 
 const cards = [
   {
-    title: "Talleres en Grupo",
-    text: "Vive una experiencia transformadora a traves de dinamicas grupales guiadas que invitan a mirar hacia dentro y compartir el proceso en comunidad.",
-    image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
-    alt: "Grupo en circulo durante un taller de crecimiento personal"
+    title: "Clases virtuales del Zohar por Zoom",
+    text: "Sumate a encuentros online para estudiar Zohar con guia en vivo, espacio de preguntas y material para seguir profundizando durante la semana.",
+    image: "/cursos/rosh-jodesh.png",
+    alt: "Invitacion a clases virtuales del Zohar"
   },
   {
-    title: "Entrenamiento Personalizado",
-    text: "Sesiones uno a uno a tu medida, pensadas para acompanarte con herramientas practicas en tu camino de autoconocimiento y crecimiento interior.",
+    title: "Shabbat los viernes por la noche",
+    text: "Compartimos un espacio de union y presencia para recibir Shabbat en comunidad, con reflexiones, canto y conexion espiritual.",
     image:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80",
-    alt: "Entrenamiento personalizado con acompanamiento profesional"
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
+    alt: "Mesa encendida para celebrar Shabbat"
   }
 ];
 
@@ -28,9 +27,9 @@ const CrecimientoPersonal = () => {
       className={`${styles.section} reveal-section ${isVisible ? "is-visible" : ""}`}
     >
       <div className={styles.wrapper}>
-        <h2>Crecimiento Personal</h2>
+        <h2>Estudios</h2>
         <p className={styles.intro}>
-          Explora tu interior y transforma tu vida con nuestros programas de entrenamiento.
+          Espacios de aprendizaje para sostener la practica espiritual en comunidad.
         </p>
 
         <div className={styles.grid}>

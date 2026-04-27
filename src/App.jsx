@@ -3,6 +3,7 @@ import RoleGuard from "./components/Auth/RoleGuard";
 import MainLayout from "./layouts/MainLayout";
 import AdminPage from "./pages/AdminPage";
 import AuthPage from "./pages/AuthPage";
+import CursoArbolVidaPage from "./pages/CursoArbolVidaPage";
 import EntrenamientoPage from "./pages/EntrenamientoPage";
 import EstudiosPage from "./pages/EstudiosPage";
 import HomePage from "./pages/HomePage";
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/estudios" element={<EstudiosPage />} />
         <Route path="/entrenamiento" element={<EntrenamientoPage />} />
+        <Route path="/entrenamiento/curso-arbol-vida" element={<CursoArbolVidaPage />} />
         <Route path="/introspeccion" element={<IntrospeccionPage />} />
         <Route
           path="/admin"
