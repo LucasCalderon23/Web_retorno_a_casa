@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"c:\\\\Users\\\\DELL\\\\source\\\\repos\\\\retorno-a-casa\"; Get-ChildItem -Force | Format-Table Name, @{Name='Type';Expression={if\\($_.PSIsContainer\\){'DIR'}else{'FILE'}}} -AutoSize)",
+      "PowerShell(cd \"c:\\\\Users\\\\DELL\\\\source\\\\repos\\\\retorno-a-casa\"; Get-ChildItem -Path src -Recurse -Directory | Select-Object -ExpandProperty FullName | ForEach-Object { $_.Replace\\(\"c:\\\\Users\\\\DELL\\\\source\\\\repos\\\\retorno-a-casa\\\\\", \"\"\\) })"
+    ]
+  }
+}

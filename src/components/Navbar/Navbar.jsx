@@ -12,7 +12,8 @@ const Navbar = () => {
     { label: "Inicio", to: "/" },
     { label: "Estudios", to: "/estudios" },
     { label: "Entrenamiento", to: "/entrenamiento" },
-    { label: "Introspeccion", to: "/introspeccion" }
+    { label: "Introspeccion", to: "/introspeccion" },
+    { label: "Cursos", to: "/cursos" }
   ];
 
   if (user?.role === "Admin") {
