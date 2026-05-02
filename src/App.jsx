@@ -13,6 +13,7 @@ import IntrospeccionPage from "./pages/IntrospeccionPage";
 const App = () => {
   return (
     <Routes>
+      {/* Public routes with Navbar + Footer */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/estudios" element={<EstudiosPage />} />
@@ -20,15 +21,18 @@ const App = () => {
         <Route path="/entrenamiento/curso-arbol-vida" element={<CursoArbolVidaPage />} />
         <Route path="/introspeccion" element={<IntrospeccionPage />} />
         <Route path="/cursos" element={<CursosDashboardPage />} />
-        <Route
-          path="/admin"
-          element={
-            <RoleGuard allowedRoles={["Admin"]}>
-              <AdminPage />
-            </RoleGuard>
-          }
-        />
       </Route>
+
+      {/* Admin: own full-screen layout, no public Navbar/Footer */}
+      <Route
+        path="/admin"
+        element={
+          <RoleGuard allowedRoles={["Admin"]}>
+            <AdminPage />
+          </RoleGuard>
+        }
+      />
+
       <Route path="/auth" element={<AuthPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

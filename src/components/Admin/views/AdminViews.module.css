@@ -1,0 +1,704 @@
+/*
+ * Shared styles for all admin views.
+ * CSS custom properties (--green, --card, etc.) are defined on .shell
+ * in AdminPage.module.css and cascade to all children.
+ */
+
+/* ── Section header ──────────────────────────────────────────────────────── */
+
+.viewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.viewTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.viewSubtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+  font-style: italic;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.16s ease;
+  white-space: nowrap;
+}
+
+.btnPrimary:hover { filter: brightness(1.1); }
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-dim);
+  color: var(--green);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 7px 16px;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.16s ease;
+  white-space: nowrap;
+}
+
+.btnSecondary:hover { background: var(--green-hover); }
+
+.btnDanger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--danger-dim);
+  color: var(--danger);
+  border: 1px solid rgba(201, 75, 75, 0.25);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font: inherit;
+  font-size: 0.83rem;
+  cursor: pointer;
+  transition: background 0.16s ease;
+  white-space: nowrap;
+}
+
+.btnDanger:hover { background: rgba(201, 75, 75, 0.2); }
+
+/* Small icon-only buttons */
+.btnIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: var(--green-dim);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.16s ease, color 0.16s ease;
+  flex-shrink: 0;
+}
+
+.btnIcon:hover { background: var(--green-hover); color: var(--text); }
+
+.btnIconDanger {
+  background: var(--danger-dim);
+  color: var(--danger);
+  border-color: rgba(201, 75, 75, 0.2);
+}
+
+.btnIconDanger:hover { background: rgba(201, 75, 75, 0.2); }
+
+.btnIconNeutral {
+  background: transparent;
+  color: var(--text-dim);
+  border-color: var(--border);
+}
+
+.btnIconNeutral:hover { background: var(--green-dim); color: var(--text-muted); }
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+/* ── Stats grid ──────────────────────────────────────────────────────────── */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.statCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.statLabel {
+  font-size: 0.69rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.statValue {
+  font-family: "Playfair Display", serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+}
+
+.statSub {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+}
+
+/* ── Quick action buttons ─────────────────────────────────────────────────── */
+
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.quickBtn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  text-align: left;
+  transition: background 0.16s ease, border-color 0.16s ease;
+}
+
+.quickBtn:hover {
+  background: var(--green-dim);
+  border-color: var(--border-strong);
+}
+
+.quickBtnIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--green-dim);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Table ───────────────────────────────────────────────────────────────── */
+
+.tableWrap {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.tableWrap::-webkit-scrollbar { height: 4px; }
+.tableWrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.table th {
+  text-align: left;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 14px 11px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.87rem;
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.table tr:last-child td { border-bottom: 0; }
+
+.table tbody tr { transition: background 0.14s ease; }
+.table tbody tr:hover td { background: var(--green-dim); }
+
+/* ── Form elements ───────────────────────────────────────────────────────── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.formGroupFull {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.71rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.input,
+.textarea,
+.select {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 13px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  transition: border-color 0.16s ease;
+  width: 100%;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: 0;
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px var(--green-dim);
+}
+
+.input::placeholder,
+.textarea::placeholder { color: var(--text-dim); }
+
+.textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.select option { background: var(--card); color: var(--text); }
+
+/* ── Image input with preview ────────────────────────────────────────────── */
+
+.imgInputWrap {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.imgThumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--bg);
+}
+
+.imgThumbPlaceholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+  flex-shrink: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  font-size: 1.2rem;
+}
+
+/* ── Badge ───────────────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.71rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.badgeGreen {
+  background: rgba(44, 178, 25, 0.14);
+  color: #7de05c;
+  border: 1px solid rgba(44, 178, 25, 0.22);
+}
+
+.badgeGray {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-dim);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.badgeOrange {
+  background: rgba(196, 154, 42, 0.14);
+  color: #d4b052;
+  border: 1px solid rgba(196, 154, 42, 0.22);
+}
+
+/* ── Toggle switch ───────────────────────────────────────────────────────── */
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+
+.toggleTrack {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.toggleTrack::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 3px;
+  top: 3px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.toggle input:checked + .toggleTrack {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.toggle input:checked + .toggleTrack::before {
+  transform: translateX(15px);
+  background: #fff;
+}
+
+/* ── Tabs ────────────────────────────────────────────────────────────────── */
+
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 9px 20px;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.87rem;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.16s ease, border-color 0.16s ease;
+  white-space: nowrap;
+}
+
+.tab:hover { color: var(--text); }
+
+.tabActive {
+  border-bottom-color: var(--green);
+  color: var(--green);
+}
+
+/* ── Actions row ─────────────────────────────────────────────────────────── */
+
+.actionsRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* ── Empty state ─────────────────────────────────────────────────────────── */
+
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* ── File grid ───────────────────────────────────────────────────────────── */
+
+.fileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.fileItem {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.16s ease;
+}
+
+.fileItem:hover { border-color: var(--border-strong); }
+
+.fileImg {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.fileFooter {
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  border-top: 1px solid var(--border);
+}
+
+.fileName {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* ── Upload zone ─────────────────────────────────────────────────────────── */
+
+.uploadZone {
+  border: 2px dashed var(--border-strong);
+  border-radius: 12px;
+  padding: 36px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.uploadZone:hover,
+.uploadZoneDragOver {
+  border-color: var(--green);
+  background: var(--green-dim);
+  color: var(--text);
+}
+
+.uploadZone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.uploadIcon {
+  color: var(--green);
+  opacity: 0.7;
+}
+
+.uploadText {
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.uploadHint {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+}
+
+/* ── Divider ─────────────────────────────────────────────────────────────── */
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 18px 0;
+}
+
+/* ── Course row thumbnail ────────────────────────────────────────────────── */
+
+.rowThumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  display: block;
+}
+
+.rowThumbPlaceholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── Class list (inside ClassesView) ────────────────────────────────────── */
+
+.classList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.classRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.14s ease;
+}
+
+.classRow:last-child { border-bottom: 0; }
+.classRow:hover { background: var(--green-dim); }
+
+.classOrder {
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.classInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.classTitle {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.classMeta {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Select for course picker ────────────────────────────────────────────── */
+
+.coursePicker {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 13px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: border-color 0.16s ease;
+  min-width: 220px;
+}
+
+.coursePicker:focus {
+  outline: 0;
+  border-color: var(--green);
+}
+
+/* ── Content section card ────────────────────────────────────────────────── */
+
+.sectionCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionSaveRow {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
